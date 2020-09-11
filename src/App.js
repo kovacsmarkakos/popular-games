@@ -21,7 +21,7 @@ const App = () => {
 
   return (
     <div className={styles.container}>
-      <Filters />
+      <Filters className={styles.filters} />
       <Cards isLoading={isLoading} items={items} />
     </div>
   )
