@@ -8,7 +8,7 @@ const Cards = ({ items, isLoading }) => {
     <div className={styles.container}>
       <Grid container spacing={3} justify="center">
         {items.map(item => (
-          <Grid item component={Card}>
+          <Grid item key={item.id} component={Card}>
             <CardContent>
               <Typography color="textSecondary" gutterBottom>{item.name}</Typography>
               <Typography variant="h5">{item.metacritic}</Typography>
