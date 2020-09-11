@@ -1,26 +1,31 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import Cards from './components/Cards/Cards'
 import Filters from './components/Filters/Filters'
 import styles from './App.module.css'
-import axios from 'axios'
 import { fetchData } from './api'
 
-class App extends React.Component {
+const App = () => {
+  const [items, setItems] = useState([])
+  const [isLoading, setIsLoading] = useState(true)
 
-  async componentDidMount() {
-    const data = await fetchData()
+  useEffect(() => {
+    const fetchItems = async () => {
+      const result = await fetchData()
 
-    console.log(data)
-  }
+      setItems(result.data.results)
+      setIsLoading(false)
 
-  render() {
-    return (
-      <div className={styles.container}>
-        <Filters />
-        <Cards />
-      </div>
-    )
-  }
+    }
+    fetchItems()
+  }, [])
+
+  return (
+    <div className={styles.container}>
+      <Filters />
+      <Cards isLoading={isLoading} items={items} />
+    </div>
+  )
 }
+
 
 export default App
