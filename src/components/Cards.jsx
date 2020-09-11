@@ -44,7 +44,7 @@ const Cards = React.memo(function GalaxyCard({ items }) {
   return (
     <>
       {items.map(item => (
-        <Grid item xs={12} sm={6} key={item.id}>
+        <Grid item xs={12} sm={6} md={6} lg={3} xl={3} key={item.id}>
           <Card className={styles.card}>
             <CardMedia
               classes={mediaStyles}
