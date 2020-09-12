@@ -3,6 +3,7 @@ import { fetchData } from './api'
 import Filters from './components/Filters.jsx'
 import CardGrid from './components/CardGrid.jsx'
 import styles from './App.module.css'
+import { Typography } from '@material-ui/core/';
 
 const App = () => {
   const [items, setItems] = useState([])
@@ -22,6 +23,9 @@ const App = () => {
 
   return (
     <div className={styles.container}>
+      <Typography variant="h1">
+        Game Ratings
+      </Typography>
       <Filters
         className={styles.filters}
         year={year}
@@ -32,6 +36,5 @@ const App = () => {
     </div>
   )
 }
-
 
 export default App

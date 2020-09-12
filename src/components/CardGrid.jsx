@@ -5,13 +5,9 @@ import { makeStyles, Grid, CircularProgress } from '@material-ui/core/';
 const useStyles = makeStyles((theme) => ({
   root: {
     flexGrow: 1,
+    marginTop: 30
   },
-  paper: {
-    padding: theme.spacing(2),
-    textAlign: 'center',
-    color: theme.palette.text.secondary,
-  },
-}));
+}))
 
 const CardGrid = ({ isLoading, items }) => {
   const classes = useStyles();
