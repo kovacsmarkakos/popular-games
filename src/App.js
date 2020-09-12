@@ -7,6 +7,7 @@ import styles from './App.module.css'
 const App = () => {
   const [items, setItems] = useState([])
   const [isLoading, setIsLoading] = useState(true)
+  const [selectYear, setSelectYear] = useState(1990)
 
   useEffect(() => {
     const fetchItems = async () => {
@@ -18,6 +19,9 @@ const App = () => {
     }
     fetchItems()
   }, [])
+
+  const now = new Date().getUTCFullYear();
+  const years = Array(now - (now - 30)).fill('').map((v, idx) => now - idx);
 
   return (
     <div className={styles.container}>

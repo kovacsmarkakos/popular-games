@@ -1,9 +1,8 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
-import Box from '@material-ui/core/Box';
-import Grid from '@material-ui/core/Grid';
-import Card from '@material-ui/core/Card';
-import CardMedia from '@material-ui/core/CardMedia';
+import { Box, Grid, Card, CardMedia } from '@material-ui/core/';
+import CountUp from 'react-countup';
+
 import {
   Info,
   InfoCaption,
@@ -53,7 +52,9 @@ const Cards = React.memo(function GalaxyCard({ items }) {
             <Box py={3} px={2} className={styles.content}>
               <Info useStyles={useGalaxyInfoStyles}>
                 <InfoTitle>{item.name}</InfoTitle>
-                <InfoCaption>{<span>Metacritic: {item.metacritic}</span>}</InfoCaption>
+                <InfoCaption>Metacritic: {<span>
+                  <CountUp end={item.metacritic} /> </span>}
+                </InfoCaption>
               </Info>
             </Box>
           </Card>
