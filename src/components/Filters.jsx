@@ -1,6 +1,5 @@
 import React from 'react'
 import {
-  NativeSelect,
   FormControl,
   InputLabel,
   Select,
@@ -18,30 +17,26 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-
-const Filters = () => {
+const Filters = ({ year, setYear }) => {
   const classes = useStyles();
-  const [age, setAge] = React.useState('');
 
   const handleChange = (event) => {
-    setAge(event.target.value);
+    setYear(event.target.value);
   };
+
+  const now = new Date().getUTCFullYear();
+  const yearsArr = Array(now - (now - 30)).fill('').map((v, idx) => now - idx);
+
   return (
     <FormControl variant="outlined" className={classes.formControl}>
-      <InputLabel id="demo-simple-select-outlined-label">Age</InputLabel>
+      <InputLabel id="demo-simple-select-outlined-label">Years</InputLabel>
       <Select
         labelId="demo-simple-select-outlined-label"
         id="demo-simple-select-outlined"
-        value={age}
+        value={year ? year : ''}
         onChange={handleChange}
-        label="Age"
-      >
-        <MenuItem value="">
-          <em>None</em>
-        </MenuItem>
-        <MenuItem value={10}>Ten</MenuItem>
-        <MenuItem value={20}>Twenty</MenuItem>
-        <MenuItem value={30}>Thirty</MenuItem>
+        label="Years" >
+        {yearsArr.map((year, i) => <MenuItem key={i} value={year}>{year}</MenuItem>)}
       </Select>
     </FormControl>
   )

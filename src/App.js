@@ -7,26 +7,28 @@ import styles from './App.module.css'
 const App = () => {
   const [items, setItems] = useState([])
   const [isLoading, setIsLoading] = useState(true)
-  const [selectYear, setSelectYear] = useState(1990)
+  const [year, setYear] = useState(0)
 
   useEffect(() => {
     const fetchItems = async () => {
-      const result = await fetchData()
+      const result = await fetchData(year)
 
       setItems(result.data.results)
       setIsLoading(false)
 
     }
     fetchItems()
-  }, [])
-
-  const now = new Date().getUTCFullYear();
-  const years = Array(now - (now - 30)).fill('').map((v, idx) => now - idx);
+  }, [year])
 
   return (
     <div className={styles.container}>
-      <Filters className={styles.filters} />
-      <CardGrid isLoading={isLoading} items={items} />
+      <Filters
+        className={styles.filters}
+        year={year}
+        setYear={setYear} />
+      <CardGrid
+        isLoading={isLoading}
+        items={items} />
     </div>
   )
 }
