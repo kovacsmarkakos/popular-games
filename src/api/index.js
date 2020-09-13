@@ -1,13 +1,13 @@
 import axios from 'axios'
 
-const url = 'https://api.rawg.io/api/games?dates=2020-01-01,2020-12-31&ordering=-metacritic'
+const url = 'https://api.rawg.io/api/games?dates=2020-01-01,2020-12-31'
 
 export const fetchData = async (year) => {
 
   let changeableUrl = url
 
   if (year) {
-    changeableUrl = `https://api.rawg.io/api/games?dates=${year}-01-01,${year}-12-31&ordering=-metacritic`
+    changeableUrl = `https://api.rawg.io/api/games?dates=${year}-01-01,${year}-12-31`
   }
 
   try {

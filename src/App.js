@@ -9,6 +9,7 @@ const App = () => {
   const [items, setItems] = useState([])
   const [isLoading, setIsLoading] = useState(true)
   const [year, setYear] = useState(0)
+  const [genre, setGenre] = useState("")
 
   useEffect(() => {
     const fetchItems = async () => {
