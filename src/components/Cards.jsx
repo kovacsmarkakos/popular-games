@@ -53,7 +53,7 @@ const Cards = React.memo(function GalaxyCard({ items }) {
               <Info useStyles={useGalaxyInfoStyles}>
                 <InfoTitle>{item.name}</InfoTitle>
                 <InfoCaption>Metacritic: {<span>
-                  <CountUp end={item.metacritic} delay={0.5} duration={4} /> </span>}
+                  <CountUp end={item.metacritic ? item.metacritic : 0} delay={0.5} duration={4} /> </span>}
                 </InfoCaption>
               </Info>
             </Box>

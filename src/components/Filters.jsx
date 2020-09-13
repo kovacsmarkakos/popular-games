@@ -5,7 +5,7 @@ import {
   Select,
   MenuItem
 } from '@material-ui/core'
-import { makeStyles } from '@material-ui/core/styles';
+import { makeStyles } from '@material-ui/core/styles'
 
 const useStyles = makeStyles((theme) => ({
   formControl: {
@@ -13,19 +13,23 @@ const useStyles = makeStyles((theme) => ({
     marginBottom: theme.spacing(5),
     marginLeft: theme.spacing(2),
     marginRight: theme.spacing(2),
-    minWidth: 130,
+    minWidth: 140,
   },
   selectEmpty: {
     marginTop: theme.spacing(1),
   },
 }));
 
-const Filters = ({ year, setYear }) => {
+const Filters = ({ year, setYear, fetchedGenres, genre, setGenre }) => {
+
   const classes = useStyles();
 
-  const handleChange = (event) => {
+  const handleYearChange = (event) => {
     setYear(event.target.value);
-  };
+  }
+  const handleGenreChange = (event) => {
+    setGenre(event.target.value);
+  }
 
   const now = new Date().getUTCFullYear();
   const yearsArr = Array(now - (now - 30)).fill('').map((v, idx) => now - idx);
@@ -38,20 +42,24 @@ const Filters = ({ year, setYear }) => {
           labelId="demo-simple-select-outlined-label"
           id="demo-simple-select-outlined"
           value={year ? year : ''}
-          onChange={handleChange}
+          onChange={handleYearChange}
           label="Years" >
           {yearsArr.map((year, i) => <MenuItem key={i} value={year}>{year}</MenuItem>)}
         </Select>
       </FormControl>
+
       <FormControl variant="outlined" className={classes.formControl}>
         <InputLabel id="demo-simple-select-outlined-label">Genre</InputLabel>
         <Select
           labelId="demo-simple-select-outlined-label"
           id="demo-simple-select-outlined"
-          value=''
-          onChange={handleChange}
+          value={genre ? genre : ''}
+          onChange={handleGenreChange}
           label="Genre" >
-          {yearsArr.map((year, i) => <MenuItem key={i} value={year}>{year}</MenuItem>)}
+          <MenuItem value="">
+            <em>All</em>
+          </MenuItem>
+          {fetchedGenres.map((genre, i) => <MenuItem key={i} value={genre.toLowerCase()}>{genre}</MenuItem>)}
         </Select>
       </FormControl>
     </div>
