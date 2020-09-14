@@ -23,7 +23,7 @@ const App = () => {
     const fetchItems = async () => {
       const result = await fetchData(year, genre)
 
-      setItems(result.data.results)
+      setItems(result)
       setIsLoading(false)
 
     }
@@ -32,8 +32,11 @@ const App = () => {
 
   return (
     <div className={styles.container}>
-      <Typography variant="h1">
-        Game Ratings
+      <Typography variant="h1" gutterBottom>
+        Popular Games
+      </Typography>
+      <Typography variant="h5" >
+        The most popular games by year and genre
       </Typography>
       <Filters
         className={styles.filters}

@@ -17,9 +17,9 @@ export const fetchData = async (year, genre) => {
   }
 
   try {
-    const data = await axios.get(changeableUrl)
+    const { data: { results } } = await axios.get(changeableUrl)
 
-    return data
+    return results
 
   } catch (error) {
     console.log(error)
