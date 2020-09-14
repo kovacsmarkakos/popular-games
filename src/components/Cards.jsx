@@ -2,6 +2,8 @@ import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import { Box, Grid, Card, CardMedia } from '@material-ui/core/';
 import CountUp from 'react-countup';
+import "animate.css/animate.min.css";
+import ScrollAnimation from 'react-animate-on-scroll';
 
 import {
   Info,
@@ -44,20 +46,24 @@ const Cards = React.memo(function GalaxyCard({ items }) {
     <>
       {items.map(item => (
         <Grid item xs={12} sm={6} md={6} lg={3} xl={3} key={item.id}>
-          <Card className={styles.card}>
-            <CardMedia
-              classes={mediaStyles}
-              image={item.background_image}
-            />
-            <Box py={3} px={2} className={styles.content}>
-              <Info useStyles={useGalaxyInfoStyles}>
-                <InfoTitle>{item.name}</InfoTitle>
-                <InfoCaption>Metacritic: {<span>
-                  <CountUp end={item.metacritic ? item.metacritic : 0} delay={0.5} duration={4} /> </span>}
-                </InfoCaption>
-              </Info>
-            </Box>
-          </Card>
+          <ScrollAnimation
+            animateIn="animate__fadeIn"
+            animateOnce="true" >
+            <Card className={styles.card}>
+              <CardMedia
+                classes={mediaStyles}
+                image={item.background_image}
+              />
+              <Box py={3} px={2} className={styles.content}>
+                <Info useStyles={useGalaxyInfoStyles}>
+                  <InfoTitle>{item.name}</InfoTitle>
+                  <InfoCaption>Metacritic: {<span>
+                    <CountUp end={item.metacritic ? item.metacritic : 0} delay={0.4} duration={3} /> </span>}
+                  </InfoCaption>
+                </Info>
+              </Box>
+            </Card>
+          </ScrollAnimation>
         </Grid>
       ))}
     </>

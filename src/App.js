@@ -25,7 +25,6 @@ const App = () => {
 
       setItems(result)
       setIsLoading(false)
-
     }
     fetchItems()
   }, [year, genre])
@@ -47,6 +46,7 @@ const App = () => {
         fetchedGenres={fetchedGenres} />
       <CardGrid
         isLoading={isLoading}
+        setIsLoading={setIsLoading}
         items={items} />
     </div>
   )
