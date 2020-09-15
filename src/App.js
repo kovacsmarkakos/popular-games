@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react'
 import { fetchData, fetchGenres } from './api'
 import Filters from './components/Filters.jsx'
 import CardGrid from './components/CardGrid.jsx'
+import Footer from './components/Footer'
 import styles from './App.module.css'
 import { Typography } from '@material-ui/core/';
 
@@ -30,25 +31,28 @@ const App = () => {
   }, [year, genre])
 
   return (
-    <div className={styles.container}>
-      <Typography variant="h1" gutterBottom>
-        Popular Games
+    <>
+      <div className={styles.container}>
+        <Typography variant="h1" gutterBottom>
+          Popular Games
       </Typography>
-      <Typography variant="h5" >
-        The most popular games by year and genre
+        <Typography variant="h5" >
+          The most popular games by year and genre
       </Typography>
-      <Filters
-        className={styles.filters}
-        year={year}
-        setYear={setYear}
-        genre={genre}
-        setGenre={setGenre}
-        fetchedGenres={fetchedGenres} />
-      <CardGrid
-        isLoading={isLoading}
-        setIsLoading={setIsLoading}
-        items={items} />
-    </div>
+        <Filters
+          className={styles.filters}
+          year={year}
+          setYear={setYear}
+          genre={genre}
+          setGenre={setGenre}
+          fetchedGenres={fetchedGenres} />
+        <CardGrid
+          isLoading={isLoading}
+          setIsLoading={setIsLoading}
+          items={items} />
+      </div>
+      <Footer />
+    </>
   )
 }
 
