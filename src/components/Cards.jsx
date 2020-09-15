@@ -3,8 +3,6 @@ import { makeStyles } from '@material-ui/core/styles';
 import { Box, Grid, Card, CardMedia } from '@material-ui/core/';
 import CountUp from 'react-countup';
 import "animate.css/animate.min.css";
-import ScrollAnimation from 'react-animate-on-scroll';
-
 import {
   Info,
   InfoCaption,
@@ -12,6 +10,8 @@ import {
 } from '@mui-treasury/components/info';
 import { useGalaxyInfoStyles } from '@mui-treasury/styles/info/galaxy';
 import { useCoverCardMediaStyles } from '@mui-treasury/styles/cardMedia/cover';
+import ScrollAnimation from 'react-animate-on-scroll';
+import HoverVideoPlayer from 'react-hover-video-player';
 
 const useStyles = makeStyles(() => ({
   card: {
@@ -42,28 +42,43 @@ const useStyles = makeStyles(() => ({
 const Cards = React.memo(function GalaxyCard({ items }) {
   const mediaStyles = useCoverCardMediaStyles({ bgPosition: 'top' });
   const styles = useStyles();
+
   return (
     <>
-      {items.map(item => (
+      {items.map((item) => (
         <Grid item xs={12} sm={6} md={6} lg={3} xl={3} key={item.id}>
-          <ScrollAnimation
-            animateIn="animate__fadeIn"
-            animateOnce="true" >
-            <Card className={styles.card}>
-              <CardMedia
-                classes={mediaStyles}
-                image={item.background_image}
-              />
-              <Box py={3} px={2} className={styles.content}>
-                <Info useStyles={useGalaxyInfoStyles}>
-                  <InfoTitle>{item.name}</InfoTitle>
-                  <InfoCaption>Metacritic: {<span>
-                    <CountUp end={item.metacritic ? item.metacritic : 0} delay={0.4} duration={3} /> </span>}
-                  </InfoCaption>
-                </Info>
-              </Box>
-            </Card>
-          </ScrollAnimation>
+          <HoverVideoPlayer
+            videoSrc={item.clip ? item.clip.clips.full : null}
+            sizingMode="overlay"
+            preload="none"
+            unloadVideoOnPaused
+            videoStyle={{
+              borderRadius: '1rem',
+            }}
+            pausedOverlay={
+              <ScrollAnimation
+                animateIn="animate__fadeIn"
+                animateOnce={true} >
+                <Card className={styles.card}>
+                  <CardMedia
+                    classes={mediaStyles}
+                    image={item.background_image} />
+                  <Box py={3} px={2} className={styles.content}>
+                    <Info useStyles={useGalaxyInfoStyles}>
+                      <InfoTitle>{item.name}</InfoTitle>
+                      <InfoCaption>Metacritic: {<span>
+                        <CountUp end={item.metacritic ? item.metacritic : 0} delay={0.4} duration={3} />
+                      </span>}
+                      </InfoCaption>
+                    </Info>
+                  </Box>
+                </Card>
+              </ScrollAnimation>
+            }
+            loadingOverlay={
+              <div>Loading...</div>
+            }
+          />
         </Grid>
       ))}
     </>
