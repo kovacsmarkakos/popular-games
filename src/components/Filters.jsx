@@ -59,7 +59,7 @@ const Filters = ({ year, setYear, fetchedGenres, genre, setGenre }) => {
           <MenuItem value="">
             <em>All</em>
           </MenuItem>
-          {fetchedGenres.map((genre, i) => <MenuItem key={i} value={genre.toLowerCase()}>{genre}</MenuItem>)}
+          {fetchedGenres.map((genre) => <MenuItem key={genre.id} value={genre.slug}>{genre.name}</MenuItem>)}
         </Select>
       </FormControl>
     </div>

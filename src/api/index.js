@@ -30,7 +30,7 @@ export const fetchGenres = async () => {
   try {
     const { data: { results } } = await axios.get("https://api.rawg.io/api/genres")
 
-    return results.map((genre) => genre.name)
+    return results
   } catch (error) {
     console.log(error)
   }
