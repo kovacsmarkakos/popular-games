@@ -50,7 +50,7 @@ const Cards = React.memo(function GalaxyCard({ items }) {
           <HoverVideoPlayer
             videoSrc={item.clip ? item.clip.clips.full : null}
             sizingMode="overlay"
-            preload="none"
+            preload="metadata"
             unloadVideoOnPaused
             videoStyle={{
               borderRadius: '1rem',
@@ -58,6 +58,7 @@ const Cards = React.memo(function GalaxyCard({ items }) {
             pausedOverlay={
               <ScrollAnimation
                 animateIn="animate__fadeIn"
+                offset={130}
                 animateOnce={true} >
                 <Card className={styles.card}>
                   <CardMedia
