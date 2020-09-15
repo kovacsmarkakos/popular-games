@@ -1,6 +1,6 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
-import { Box, Grid, Card, CardMedia } from '@material-ui/core/';
+import { Box, Grid, Card, CardMedia, CircularProgress } from '@material-ui/core/';
 import CountUp from 'react-countup';
 import "animate.css/animate.min.css";
 import {
@@ -77,7 +77,7 @@ const Cards = React.memo(function GalaxyCard({ items }) {
               </ScrollAnimation>
             }
             loadingOverlay={
-              <div>Loading...</div>
+              item.clip ? <CircularProgress /> : null
             }
           />
         </Grid>
