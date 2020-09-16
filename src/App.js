@@ -5,6 +5,7 @@ import CardGrid from './components/CardGrid.jsx'
 import Footer from './components/Footer'
 import styles from './App.module.css'
 import { Typography } from '@material-ui/core/';
+import SoundToggle from './components/SoundToggle'
 
 const App = () => {
   const [items, setItems] = useState([])
@@ -12,6 +13,7 @@ const App = () => {
   const [year, setYear] = useState(0)
   const [fetchedGenres, setFetchedGenres] = useState([])
   const [genre, setGenre] = useState("")
+  const [muted, setMuted] = useState(true)
 
   useEffect(() => {
     const fetchAPI = async () => {
@@ -33,12 +35,15 @@ const App = () => {
   return (
     <>
       <div className={styles.container}>
+        <SoundToggle
+          muted={muted}
+          setMuted={setMuted} />
         <Typography variant="h1" gutterBottom>
           Popular Games
-      </Typography>
+        </Typography>
         <Typography variant="h5" >
           The most popular games by year and genre
-      </Typography>
+        </Typography>
         <Filters
           className={styles.filters}
           year={year}
@@ -49,7 +54,9 @@ const App = () => {
         <CardGrid
           isLoading={isLoading}
           setIsLoading={setIsLoading}
-          items={items} />
+          items={items}
+          muted={muted}
+          setMuted={setMuted} />
       </div>
       <Footer />
     </>

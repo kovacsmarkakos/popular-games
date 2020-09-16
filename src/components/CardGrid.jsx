@@ -8,13 +8,13 @@ const useStyles = makeStyles((theme) => ({
   },
 }))
 
-const CardGrid = ({ isLoading, items }) => {
+const CardGrid = ({ isLoading, items, muted, setMuted }) => {
   const classes = useStyles();
 
   return isLoading ? <CircularProgress /> : (
     <div className={classes.root}>
       <Grid container spacing={3}>
-        <Cards items={items} />
+        <Cards items={items} muted={muted} setMuted={setMuted} />
       </Grid>
     </div>
   )

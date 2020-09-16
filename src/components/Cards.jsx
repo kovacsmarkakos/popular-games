@@ -39,7 +39,7 @@ const useStyles = makeStyles(() => ({
   },
 }));
 
-const Cards = React.memo(function GalaxyCard({ items }) {
+const Cards = React.memo(function GalaxyCard({ items, muted }) {
   const mediaStyles = useCoverCardMediaStyles({ bgPosition: 'top' });
   const styles = useStyles();
 
@@ -51,6 +51,7 @@ const Cards = React.memo(function GalaxyCard({ items }) {
             videoSrc={item.clip ? item.clip.clips.full : null}
             sizingMode="overlay"
             preload="metadata"
+            muted={muted}
             unloadVideoOnPaused
             videoStyle={{
               borderRadius: '1rem',
