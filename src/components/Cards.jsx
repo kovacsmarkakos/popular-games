@@ -59,7 +59,8 @@ const Cards = React.memo(function GalaxyCard({ items, muted }) {
             pausedOverlay={
               <ScrollAnimation
                 animateIn="animate__fadeIn"
-                offset={130}
+                offset={140}
+                duration={0.6}
                 animateOnce={true} >
                 <Card className={styles.card}>
                   <CardMedia

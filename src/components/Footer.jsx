@@ -32,6 +32,9 @@ const useStyles = makeStyles((theme) => ({
     marginTop: 'auto',
     backgroundColor:
       theme.palette.type === 'light' ? theme.palette.grey[200] : theme.palette.grey[800],
+    '@media (min-width: 1280px)': {
+      padding: theme.spacing(3, 10)
+    },
   },
   footerIcons: {
     display: 'flex',
@@ -46,7 +49,7 @@ const Footer = () => {
     <div className={classes.root}>
       <CssBaseline />
       <footer className={classes.footer}>
-        <Container maxWidth="md">
+        <Container>
           <Typography variant="body1">Made by Mark Kovacs</Typography>
           <Copyright />
         </Container>
