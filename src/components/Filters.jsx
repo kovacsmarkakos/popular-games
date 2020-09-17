@@ -8,15 +8,18 @@ import {
 import { makeStyles } from '@material-ui/core/styles'
 
 const useStyles = makeStyles((theme) => ({
-  formControl: {
-    marginTop: theme.spacing(5),
-    marginBottom: theme.spacing(5),
-    marginLeft: theme.spacing(2),
-    marginRight: theme.spacing(2),
-    minWidth: 140,
+  filterContainer: {
+    margin: theme.spacing(3, 'auto'),
+    [theme.breakpoints.down('xs')]: {
+      display: 'flex',
+      flexDirection: 'column',
+      justifyContent: 'center',
+      width: '100%',
+    },
   },
-  selectEmpty: {
-    marginTop: theme.spacing(1),
+  formControl: {
+    margin: theme.spacing(1),
+    minWidth: 150,
   },
 }));
 
@@ -35,7 +38,7 @@ const Filters = ({ year, setYear, fetchedGenres, genre, setGenre }) => {
   const yearsArr = Array(now - (now - 30)).fill('').map((v, idx) => now - idx);
 
   return (
-    <div className="filter-container">
+    <div className={classes.filterContainer}>
       <FormControl variant="outlined" className={classes.formControl}>
         <InputLabel id="demo-simple-select-outlined-label">Year</InputLabel>
         <Select

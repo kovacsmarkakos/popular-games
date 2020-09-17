@@ -3,9 +3,8 @@ import { fetchData, fetchGenres } from './api'
 import Filters from './components/Filters.jsx'
 import CardGrid from './components/CardGrid.jsx'
 import Footer from './components/Footer'
+import Header from './components/Header'
 import styles from './App.module.css'
-import { Typography } from '@material-ui/core/';
-import SoundToggle from './components/SoundToggle'
 
 const App = () => {
   const [items, setItems] = useState([])
@@ -35,15 +34,9 @@ const App = () => {
   return (
     <>
       <div className={styles.container}>
-        <SoundToggle
+        <Header
           muted={muted}
           setMuted={setMuted} />
-        <Typography variant="h1" gutterBottom>
-          Popular Games
-        </Typography>
-        <Typography variant="h5" >
-          The most popular games by year and genre
-        </Typography>
         <Filters
           className={styles.filters}
           year={year}
