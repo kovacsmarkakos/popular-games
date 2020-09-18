@@ -10,6 +10,7 @@ import { makeStyles } from '@material-ui/core/styles'
 const useStyles = makeStyles((theme) => ({
   filterContainer: {
     margin: theme.spacing(2, 0),
+    zIndex: 10,
     [theme.breakpoints.down('xs')]: {
       display: 'flex',
       flexDirection: 'column',

@@ -1,21 +1,30 @@
-import React from 'react';
-import SoundToggle from './SoundToggle'
-import { IconButton, Typography, Box } from '@material-ui/core';
-import { makeStyles } from '@material-ui/core/styles';
-import { createMuiTheme, responsiveFontSizes, ThemeProvider } from '@material-ui/core/styles';
+import React from "react";
+import styles from "./Header.module.css";
+import SoundToggle from "./SoundToggle";
+import { IconButton, Typography, Box } from "@material-ui/core";
+import { makeStyles } from "@material-ui/core/styles";
+import {
+  createMuiTheme,
+  responsiveFontSizes,
+  ThemeProvider,
+} from "@material-ui/core/styles";
 
 const useStyles = makeStyles((theme) => ({
   header: {
-    display: 'flex',
-    flexDirection: 'column',
-    justifyContent: 'center',
-    alignItems: 'center',
+    display: "flex",
+    position: "relative",
+    flexDirection: "column",
+    justifyContent: "center",
+    alignItems: "center",
     margin: theme.spacing(0, 0, 3, 0),
     padding: theme.spacing(4, 2),
-    textAlign: 'center',
-    width: '100vw',
-    height: '40vh',
-    backgroundColor: '#3b3c38',
+    textAlign: "center",
+    textShadow:
+      "0px 4px 3px rgba(0,0,0,0.4),0px 8px 13px rgba(0,0,0,0.1),0px 18px 23px rgba(0,0,0,0.1)",
+    width: "100vw",
+    height: "40vh",
+    backgroundColor: "#3b3c38",
+    zIndex: 1,
   },
 }));
 
@@ -28,31 +37,23 @@ const Header = ({ muted, setMuted }) => {
   return (
     <>
       <header className={classes.header}>
+        <div className={styles.overlay}></div>
         <ThemeProvider theme={textTheme}>
           <Typography variant="h1">
-            <Box
-              fontWeight="fontWeightBold"
-              color="#f5da55"
-              m={1}>
+            <Box fontWeight="fontWeightBold" color="#f5da55" m={1}>
               Popular Games
             </Box>
           </Typography>
           <Typography variant="h6" component="h2">
-            <Box
-              fontWeight="600"
-              letterSpacing={4}
-              color="#fff"
-              m={1}>
+            <Box fontWeight="600" letterSpacing={4} color="#fff" m={1}>
               The most popular games by Year and Genre
             </Box>
           </Typography>
         </ThemeProvider>
       </header>
-      <SoundToggle
-        muted={muted}
-        setMuted={setMuted} />
+      <SoundToggle muted={muted} setMuted={setMuted} />
     </>
-  )
-}
+  );
+};
 
-export default Header
+export default Header;
