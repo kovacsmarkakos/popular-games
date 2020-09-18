@@ -1,7 +1,6 @@
 import React from 'react';
 import SoundToggle from './SoundToggle'
-import CssBaseline from '@material-ui/core/CssBaseline';
-import { IconButton, Typography, Container, Link, Box } from '@material-ui/core';
+import { IconButton, Typography, Box } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
 import { createMuiTheme, responsiveFontSizes, ThemeProvider } from '@material-ui/core/styles';
 
@@ -25,8 +24,9 @@ const Header = ({ muted, setMuted }) => {
 
   let textTheme = createMuiTheme();
   textTheme = responsiveFontSizes(textTheme);
+
   return (
-    <CssBaseline>
+    <>
       <header className={classes.header}>
         <ThemeProvider theme={textTheme}>
           <Typography variant="h1">
@@ -51,7 +51,7 @@ const Header = ({ muted, setMuted }) => {
       <SoundToggle
         muted={muted}
         setMuted={setMuted} />
-    </CssBaseline>
+    </>
   )
 }
 

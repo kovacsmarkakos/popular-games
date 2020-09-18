@@ -1,5 +1,4 @@
 import React from 'react';
-import CssBaseline from '@material-ui/core/CssBaseline';
 import { IconButton, Typography, Container, Link } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
 import GitHubIcon from '@material-ui/icons/GitHub';
@@ -7,7 +6,7 @@ import LinkedInIcon from '@material-ui/icons/LinkedIn';
 
 function Copyright() {
   return (
-    <Typography variant="body2" color="textSecondary">
+    <Typography variant="body2">
       {'Copyright © '}
       <Link color="inherit" href="https://kovacsmarkakos.github.io/">
         Website
@@ -30,16 +29,23 @@ const useStyles = makeStyles((theme) => ({
     alignItems: 'center',
     padding: theme.spacing(3, 2),
     marginTop: 'auto',
-    backgroundColor:
-      theme.palette.type === 'light' ? theme.palette.grey[200] : theme.palette.grey[800],
+    backgroundColor: theme.palette.grey[900],
+    color: theme.palette.grey[400],
     '@media (min-width: 1280px)': {
       padding: theme.spacing(3, 10)
     },
   },
   footerIcons: {
     display: 'flex',
-    justifyContent: 'flex-end'
-  }
+    justifyContent: 'flex-end',
+  },
+  iconButton: {
+    color: theme.palette.grey[200],
+    '&:hover': {
+      backgroundColor: theme.palette.grey[800],
+      color: '#f5da55',
+    },
+  },
 }));
 
 const Footer = () => {
@@ -47,7 +53,6 @@ const Footer = () => {
 
   return (
     <div className={classes.root}>
-      <CssBaseline />
       <footer className={classes.footer}>
         <Container>
           <Typography variant="body1">Made by Mark Kovacs</Typography>
@@ -57,14 +62,14 @@ const Footer = () => {
           <a href="https://www.linkedin.com/in/márk-kovács-0363b61b7/"
             target="_blank"
             rel="noopener noreferrer">
-            <IconButton aria-label="github">
+            <IconButton aria-label="github" className={classes.iconButton}>
               <LinkedInIcon />
             </IconButton>
           </a>
           <a href="https://github.com/kovacsmarkakos"
             target="_blank"
             rel="noopener noreferrer">
-            <IconButton aria-label="linkedin">
+            <IconButton aria-label="linkedin" className={classes.iconButton} >
               <GitHubIcon />
             </IconButton>
           </a>

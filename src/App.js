@@ -5,6 +5,19 @@ import CardGrid from './components/CardGrid.jsx'
 import Footer from './components/Footer'
 import Header from './components/Header'
 import styles from './App.module.css'
+import CssBaseline from '@material-ui/core/CssBaseline';
+import { createMuiTheme, ThemeProvider } from '@material-ui/core/styles';
+
+const theme = createMuiTheme({
+  palette: {
+    primary: {
+      main: "#3b3c38",
+    },
+    secondary: {
+      main: "#f5da55",
+    },
+  },
+});
 
 const App = () => {
   const [items, setItems] = useState([])
@@ -33,25 +46,29 @@ const App = () => {
 
   return (
     <>
-      <div className={styles.container}>
-        <Header
-          muted={muted}
-          setMuted={setMuted} />
-        <Filters
-          className={styles.filters}
-          year={year}
-          setYear={setYear}
-          genre={genre}
-          setGenre={setGenre}
-          fetchedGenres={fetchedGenres} />
-        <CardGrid
-          isLoading={isLoading}
-          setIsLoading={setIsLoading}
-          items={items}
-          muted={muted}
-          setMuted={setMuted} />
-      </div>
-      <Footer />
+      <CssBaseline /> {
+        <ThemeProvider theme={theme}>
+          <div className={styles.container}>
+            <Header
+              muted={muted}
+              setMuted={setMuted} />
+            <Filters
+              className={styles.filters}
+              year={year}
+              setYear={setYear}
+              genre={genre}
+              setGenre={setGenre}
+              fetchedGenres={fetchedGenres} />
+            <CardGrid
+              isLoading={isLoading}
+              setIsLoading={setIsLoading}
+              items={items}
+              muted={muted}
+              setMuted={setMuted} />
+          </div>
+          <Footer />
+        </ThemeProvider>
+      }
     </>
   )
 }

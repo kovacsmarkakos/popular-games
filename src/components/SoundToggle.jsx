@@ -18,7 +18,7 @@ const SoundToggle = ({ muted, setMuted }) => {
           <Switch
             checked={checked}
             onChange={toggleChecked}
-            color="primary" />}
+            color="secondary" />}
         label="Sound"
         labelPlacement="start"
       />
