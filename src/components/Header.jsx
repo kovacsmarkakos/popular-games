@@ -26,6 +26,20 @@ const useStyles = makeStyles((theme) => ({
     backgroundColor: "#3b3c38",
     zIndex: 1,
   },
+  rawg: {
+    position: "absolute",
+    top: 10,
+    right: 10,
+    textShadow: "none",
+  },
+  rawgLink: {
+    textDecoration: "none",
+    color: "#f3f3f3",
+    cursor: "pointer",
+    "&:hover": {
+      color: "#f5da55",
+    },
+  },
 }));
 
 const Header = ({ muted, setMuted }) => {
@@ -48,6 +62,20 @@ const Header = ({ muted, setMuted }) => {
             <Box fontWeight="600" letterSpacing={4} color="#fff" m={1}>
               The most popular games by Year and Genre
             </Box>
+          </Typography>
+          <Typography
+            variant="caption"
+            display="block"
+            className={classes.rawg}
+          >
+            <a
+              href="https://rawg.io/apidocs"
+              target="_blank"
+              rel="noopener noreferrer"
+              className={classes.rawgLink}
+            >
+              Source: RAWG API
+            </a>
           </Typography>
         </ThemeProvider>
       </header>

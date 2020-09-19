@@ -8,8 +8,11 @@ function Copyright() {
   return (
     <Typography variant="body2">
       {"Copyright © "}
-      <Link color="inherit" href="https://kovacsmarkakos.github.io/">
-        Website
+      <Link
+        color="inherit"
+        href="https://kovacsmarkakos.github.io/popular-games"
+      >
+        Popular Games
       </Link>{" "}
       {new Date().getFullYear()}
       {"."}
@@ -46,6 +49,9 @@ const useStyles = makeStyles((theme) => ({
       color: "#f5da55",
     },
   },
+  madeBy: {
+    color: "#fff",
+  },
 }));
 
 const Footer = () => {
@@ -55,19 +61,12 @@ const Footer = () => {
     <div className={classes.root}>
       <footer className={classes.footer}>
         <Container>
-          <Typography variant="body1">Made by Mark Kovacs</Typography>
+          <Typography variant="body1" className={classes.madeBy}>
+            Made by Mark Kovacs
+          </Typography>
           <Copyright />
         </Container>
         <Container className={classes.footerIcons}>
-          <a
-            href="https://www.linkedin.com/in/márk-kovács-0363b61b7/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <IconButton aria-label="github" className={classes.iconButton}>
-              <LinkedInIcon />
-            </IconButton>
-          </a>
           <a
             href="https://github.com/kovacsmarkakos"
             target="_blank"
@@ -75,6 +74,15 @@ const Footer = () => {
           >
             <IconButton aria-label="linkedin" className={classes.iconButton}>
               <GitHubIcon />
+            </IconButton>
+          </a>
+          <a
+            href="https://www.linkedin.com/in/márk-kovács-0363b61b7/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <IconButton aria-label="github" className={classes.iconButton}>
+              <LinkedInIcon />
             </IconButton>
           </a>
         </Container>
