@@ -1,7 +1,7 @@
 import React from "react";
 import styles from "./Header.module.css";
 import SoundToggle from "./SoundToggle";
-import { IconButton, Typography, Box } from "@material-ui/core";
+import { Typography, Box } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
 import {
   createMuiTheme,

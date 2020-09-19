@@ -1,16 +1,15 @@
-import React from 'react';
-import Switch from '@material-ui/core/Switch';
-import FormGroup from '@material-ui/core/FormGroup';
-import FormControlLabel from '@material-ui/core/FormControlLabel';
-import zIndex from '@material-ui/core/styles/zIndex';
+import React from "react";
+import Switch from "@material-ui/core/Switch";
+import FormGroup from "@material-ui/core/FormGroup";
+import FormControlLabel from "@material-ui/core/FormControlLabel";
 
 const SoundToggle = ({ muted, setMuted }) => {
-  const [checked, setChecked] = React.useState(false)
+  const [checked, setChecked] = React.useState(false);
 
   const toggleChecked = () => {
-    setChecked((prev) => !prev)
-    setMuted((prev) => !prev)
-  }
+    setChecked((prev) => !prev);
+    setMuted((prev) => !prev);
+  };
 
   return (
     <FormGroup>
@@ -20,12 +19,14 @@ const SoundToggle = ({ muted, setMuted }) => {
           <Switch
             checked={checked}
             onChange={toggleChecked}
-            color="secondary" />}
+            color="secondary"
+          />
+        }
         label="Sound"
         labelPlacement="start"
       />
     </FormGroup>
-  )
-}
+  );
+};
 
-export default SoundToggle
+export default SoundToggle;
