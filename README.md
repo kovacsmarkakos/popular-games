@@ -13,6 +13,6 @@
 
 👤 **Mark Kovacs**
 
-- Website: (https://kovacsmarkakos.github.io)
+- Website: https://kovacsmarkakos.github.io
 - Github: [@kovacsmarkakos](https://github.com/kovacsmarkakos)
 - LinkedIn: [@márk-kovács-0363b61b7](https://linkedin.com/in/márk-kovács-0363b61b7)
