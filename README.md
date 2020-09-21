@@ -1,4 +1,4 @@
-<h1 align="center">Welcome to Popular Games 👋</h1>
+<h1 align="center">Welcome to Popular Games :video_game:</h1>
 
 ![screenshot1](public/screenshots/screenshot_desktop.jpeg?raw=true)
 ##
