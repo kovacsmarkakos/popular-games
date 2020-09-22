@@ -39,17 +39,24 @@ const useStyles = makeStyles(() => ({
     bottom: 0,
     width: "100%",
   },
+  CircularProgress: {
+    position: "absolute",
+    top: "50%",
+    left: "50%",
+    transform: "translate(-50px, -50px)",
+  },
 }));
 
 const Cards = React.memo(function GalaxyCard({ items, muted }) {
   const mediaStyles = useCoverCardMediaStyles({ bgPosition: "top" });
-  const styles = useStyles();
+  const classes = useStyles();
 
   return (
     <>
       {items.map((item) => (
         <Grid item xs={12} sm={6} md={6} lg={3} xl={3} key={item.id}>
           <HoverVideoPlayer
+            className={classes.HoverVideoPlayer}
             videoSrc={item.clip ? item.clip.clips.full : null}
             sizingMode="overlay"
             preload="metadata"
@@ -65,12 +72,12 @@ const Cards = React.memo(function GalaxyCard({ items, muted }) {
                 duration={0.6}
                 animateOnce={true}
               >
-                <Card className={styles.card}>
+                <Card className={classes.card}>
                   <CardMedia
                     classes={mediaStyles}
                     image={item.background_image}
                   />
-                  <Box py={3} px={2} className={styles.content}>
+                  <Box py={3} px={2} className={classes.content}>
                     <Info useStyles={useGalaxyInfoStyles}>
                       <InfoTitle>{item.name}</InfoTitle>
                       <InfoCaption>
@@ -90,11 +97,16 @@ const Cards = React.memo(function GalaxyCard({ items, muted }) {
                 </Card>
               </ScrollAnimation>
             }
-            loadingOverlay={item.clip ? <CircularProgress /> : null}
+            loadingOverlay={
+              item.clip ? (
+                <CircularProgress className={classes.CircularProgress} />
+              ) : null
+            }
           />
         </Grid>
       ))}
     </>
   );
 });
+
 export default Cards;

@@ -46,7 +46,7 @@ const App = () => {
 
   return (
     <>
-      <CssBaseline />{" "}
+      <CssBaseline />
       {
         <ThemeProvider theme={theme}>
           <div className={styles.container}>
@@ -66,8 +66,8 @@ const App = () => {
               muted={muted}
               setMuted={setMuted}
             />
+            <Footer />
           </div>
-          <Footer />
         </ThemeProvider>
       }
     </>

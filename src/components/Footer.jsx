@@ -21,21 +21,19 @@ function Copyright() {
 }
 
 const useStyles = makeStyles((theme) => ({
-  root: {
-    display: "flex",
-    flexDirection: "column",
-    height: "15vh",
-  },
   footer: {
     display: "flex",
     justifyContent: "space-around",
     alignItems: "center",
+    width: "100vw",
+    height: "18vh",
     padding: theme.spacing(3, 2),
     marginTop: theme.spacing(2),
     backgroundColor: theme.palette.grey[900],
     color: theme.palette.grey[400],
     "@media (min-width: 1280px)": {
       padding: theme.spacing(3, 10),
+      height: "16vh",
     },
   },
   footerIcons: {
@@ -58,36 +56,34 @@ const Footer = () => {
   const classes = useStyles();
 
   return (
-    <div className={classes.root}>
-      <footer className={classes.footer}>
-        <Container>
-          <Typography variant="body1" className={classes.madeBy}>
-            Made by Mark Kovacs
-          </Typography>
-          <Copyright />
-        </Container>
-        <Container className={classes.footerIcons}>
-          <a
-            href="https://github.com/kovacsmarkakos"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <IconButton aria-label="linkedin" className={classes.iconButton}>
-              <GitHubIcon />
-            </IconButton>
-          </a>
-          <a
-            href="https://www.linkedin.com/in/márk-kovács-0363b61b7/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <IconButton aria-label="github" className={classes.iconButton}>
-              <LinkedInIcon />
-            </IconButton>
-          </a>
-        </Container>
-      </footer>
-    </div>
+    <footer className={classes.footer}>
+      <Container>
+        <Typography variant="body1" className={classes.madeBy}>
+          Made by Mark Kovacs
+        </Typography>
+        <Copyright />
+      </Container>
+      <Container className={classes.footerIcons}>
+        <a
+          href="https://github.com/kovacsmarkakos"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <IconButton aria-label="linkedin" className={classes.iconButton}>
+            <GitHubIcon />
+          </IconButton>
+        </a>
+        <a
+          href="https://www.linkedin.com/in/márk-kovács-0363b61b7/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <IconButton aria-label="github" className={classes.iconButton}>
+            <LinkedInIcon />
+          </IconButton>
+        </a>
+      </Container>
+    </footer>
   );
 };
 
