@@ -7,6 +7,7 @@ import Header from "./components/Header";
 import styles from "./App.module.css";
 import CssBaseline from "@material-ui/core/CssBaseline";
 import { createMuiTheme, ThemeProvider } from "@material-ui/core/styles";
+import { CircularProgress } from "@material-ui/core/";
 
 const theme = createMuiTheme({
   palette: {
@@ -44,7 +45,9 @@ const App = () => {
     fetchItems();
   }, [year, genre]);
 
-  return (
+  return isLoading ? (
+    ""
+  ) : (
     <>
       <CssBaseline />
       {
