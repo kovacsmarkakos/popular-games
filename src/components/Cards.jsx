@@ -47,13 +47,13 @@ const useStyles = makeStyles(() => ({
   },
 }));
 
-const Cards = React.memo(function GalaxyCard({ items, muted }) {
+const Cards = React.memo(function GalaxyCard({ items, muted, listSize }) {
   const mediaStyles = useCoverCardMediaStyles({ bgPosition: "top" });
   const classes = useStyles();
 
   return (
     <>
-      {items.map((item) => (
+      {items.slice(0, listSize).map((item) => (
         <Grid item xs={12} sm={6} md={6} lg={3} xl={3} key={item.id}>
           <HoverVideoPlayer
             className={classes.HoverVideoPlayer}

@@ -26,6 +26,7 @@ const App = () => {
   const [fetchedGenres, setFetchedGenres] = useState([]);
   const [genre, setGenre] = useState("");
   const [muted, setMuted] = useState(true);
+  const [listSize, setListSize] = useState(12);
 
   useEffect(() => {
     const fetchAPI = async () => {
@@ -60,6 +61,8 @@ const App = () => {
               genre={genre}
               setGenre={setGenre}
               fetchedGenres={fetchedGenres}
+              listSize={listSize}
+              setListSize={setListSize}
             />
             <CardGrid
               isLoading={isLoading}
@@ -67,6 +70,7 @@ const App = () => {
               items={items}
               muted={muted}
               setMuted={setMuted}
+              listSize={listSize}
             />
             <Footer />
           </div>
