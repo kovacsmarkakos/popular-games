@@ -1,15 +1,16 @@
 <h1 align="center">Welcome to Popular Games :video_game:</h1>
 
-![screenshot1](public/screenshots/screenshot_desktop.jpeg?raw=true)
+![screenshot1](public/screenshots/screenshot-desktop-2.jpeg?raw=true)
+
 ##
-  
+
 <p>
   <img alt="Version" src="https://img.shields.io/badge/version-0.1.0-blue.svg?cacheSeconds=2592000" />
 </p>
 
 > A React app that shows you the most popular games in a given year and genre.<br>
-The UI is made with Material-UI and the data is coming from RAWG video games database API.<br>
-Fully responsive, optimized for all screen sizes.
+> The UI is made with Material-UI and the data is coming from RAWG video games database API.<br>
+> Fully responsive, optimized for all screen sizes.
 
 ### 🏠 [Homepage](https://github.com/kovacsmarkakos/popular-games)
 
