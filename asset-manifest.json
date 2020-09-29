@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/popular-games/static/css/main.77b3337e.chunk.css",
-    "main.js": "/popular-games/static/js/main.900fba3c.chunk.js",
-    "main.js.map": "/popular-games/static/js/main.900fba3c.chunk.js.map",
+    "main.js": "/popular-games/static/js/main.784c6f4c.chunk.js",
+    "main.js.map": "/popular-games/static/js/main.784c6f4c.chunk.js.map",
     "runtime-main.js": "/popular-games/static/js/runtime-main.4a58fa8d.js",
     "runtime-main.js.map": "/popular-games/static/js/runtime-main.4a58fa8d.js.map",
     "static/css/2.d48510fc.chunk.css": "/popular-games/static/css/2.d48510fc.chunk.css",
     "static/js/2.df9d8141.chunk.js": "/popular-games/static/js/2.df9d8141.chunk.js",
     "static/js/2.df9d8141.chunk.js.map": "/popular-games/static/js/2.df9d8141.chunk.js.map",
     "index.html": "/popular-games/index.html",
-    "precache-manifest.8ef076cdf783831e9d31f93df1fdd1e7.js": "/popular-games/precache-manifest.8ef076cdf783831e9d31f93df1fdd1e7.js",
+    "precache-manifest.c55faba546797bd74397896539d36352.js": "/popular-games/precache-manifest.c55faba546797bd74397896539d36352.js",
     "service-worker.js": "/popular-games/service-worker.js",
     "static/css/2.d48510fc.chunk.css.map": "/popular-games/static/css/2.d48510fc.chunk.css.map",
     "static/css/main.77b3337e.chunk.css.map": "/popular-games/static/css/main.77b3337e.chunk.css.map",
@@ -20,6 +20,6 @@
     "static/css/2.d48510fc.chunk.css",
     "static/js/2.df9d8141.chunk.js",
     "static/css/main.77b3337e.chunk.css",
-    "static/js/main.900fba3c.chunk.js"
+    "static/js/main.784c6f4c.chunk.js"
   ]
 }

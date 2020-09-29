@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "29054507ee63966b96eb3639f39f94e5",
+    "revision": "414af3edb17a5c9cec7317ba80688ed8",
     "url": "/popular-games/index.html"
   },
   {
@@ -8,7 +8,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/popular-games/static/css/2.d48510fc.chunk.css"
   },
   {
-    "revision": "361817ef0622dc1c9030",
+    "revision": "9ca03fef9febe1b25b8f",
     "url": "/popular-games/static/css/main.77b3337e.chunk.css"
   },
   {
@@ -20,8 +20,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/popular-games/static/js/2.df9d8141.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "361817ef0622dc1c9030",
-    "url": "/popular-games/static/js/main.900fba3c.chunk.js"
+    "revision": "9ca03fef9febe1b25b8f",
+    "url": "/popular-games/static/js/main.784c6f4c.chunk.js"
   },
   {
     "revision": "4e841cc44cc320d0fc61",
