@@ -1,31 +1,17 @@
 import React from "react";
-import Switch from "@material-ui/core/Switch";
-import FormGroup from "@material-ui/core/FormGroup";
-import FormControlLabel from "@material-ui/core/FormControlLabel";
+import UseAnimation from "react-useanimations";
+import volume from "react-useanimations/lib/volume";
 
 const SoundToggle = ({ muted, setMuted }) => {
-  const [checked, setChecked] = React.useState(false);
-
-  const toggleChecked = () => {
-    setChecked((prev) => !prev);
-    setMuted((prev) => !prev);
-  };
-
   return (
-    <FormGroup>
-      <FormControlLabel
-        style={{ zIndex: 10 }}
-        control={
-          <Switch
-            checked={checked}
-            onChange={toggleChecked}
-            color="secondary"
-          />
-        }
-        label="Sound"
-        labelPlacement="start"
-      />
-    </FormGroup>
+    <UseAnimation
+      reverse={muted}
+      onClick={() => {
+        setMuted(!muted);
+      }}
+      size={40}
+      animation={volume}
+    />
   );
 };
 

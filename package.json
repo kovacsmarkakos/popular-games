@@ -19,7 +19,8 @@
     "react-countup": "^4.3.3",
     "react-dom": "^16.13.1",
     "react-hover-video-player": "^6.6.3",
-    "react-scripts": "3.4.3"
+    "react-scripts": "3.4.3",
+    "react-useanimations": "^2.0.5"
   },
   "scripts": {
     "start": "react-scripts start",
