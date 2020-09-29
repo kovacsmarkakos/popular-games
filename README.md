@@ -1,6 +1,6 @@
 <h1 align="center">Welcome to Popular Games :video_game:</h1>
 
-![screenshot1](public/screenshots/screenshot-desktop-2.jpeg?raw=true)
+![screenshot1](public/thumbnail/thumbnail.jpeg?raw=true)
 
 ##
 
