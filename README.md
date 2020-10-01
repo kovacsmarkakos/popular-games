@@ -25,3 +25,7 @@
 - Website: [markkovacs.com](https://markkovacs.com)
 - Github: [@kovacsmarkakos](https://github.com/kovacsmarkakos)
 - LinkedIn: [@márk-kovács-0363b61b7](https://linkedin.com/in/márk-kovács-0363b61b7)
+
+## Show your support
+
+Give a ⭐️ if this project helped you!
