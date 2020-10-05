@@ -50,6 +50,13 @@ const useStyles = makeStyles((theme) => ({
   madeBy: {
     color: "#fff",
   },
+  a: {
+    textDecoration: "none",
+    color: "#fff",
+    "&:hover": {
+      color: "#f5da55",
+    },
+  },
 }));
 
 const Footer = () => {
@@ -59,7 +66,15 @@ const Footer = () => {
     <footer className={classes.footer}>
       <Container>
         <Typography variant="body1" className={classes.madeBy}>
-          Made by Mark Kovacs
+          Made by{" "}
+          <a
+            href="https://markkovacs.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            className={classes.a}
+          >
+            Mark Kovacs
+          </a>
         </Typography>
         <Copyright />
       </Container>
