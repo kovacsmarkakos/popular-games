@@ -1,25 +1,25 @@
 {
   "files": {
     "main.css": "/popular-games/static/css/main.77b3337e.chunk.css",
-    "main.js": "/popular-games/static/js/main.67ee81d4.chunk.js",
-    "main.js.map": "/popular-games/static/js/main.67ee81d4.chunk.js.map",
+    "main.js": "/popular-games/static/js/main.51f1155c.chunk.js",
+    "main.js.map": "/popular-games/static/js/main.51f1155c.chunk.js.map",
     "runtime-main.js": "/popular-games/static/js/runtime-main.4a58fa8d.js",
     "runtime-main.js.map": "/popular-games/static/js/runtime-main.4a58fa8d.js.map",
     "static/css/2.d48510fc.chunk.css": "/popular-games/static/css/2.d48510fc.chunk.css",
-    "static/js/2.df9d8141.chunk.js": "/popular-games/static/js/2.df9d8141.chunk.js",
-    "static/js/2.df9d8141.chunk.js.map": "/popular-games/static/js/2.df9d8141.chunk.js.map",
+    "static/js/2.4613398d.chunk.js": "/popular-games/static/js/2.4613398d.chunk.js",
+    "static/js/2.4613398d.chunk.js.map": "/popular-games/static/js/2.4613398d.chunk.js.map",
     "index.html": "/popular-games/index.html",
-    "precache-manifest.18fcf0a34d55762bbaa6638c79fcbfb1.js": "/popular-games/precache-manifest.18fcf0a34d55762bbaa6638c79fcbfb1.js",
+    "precache-manifest.8eb27065e97cb011193c6e4700f3c2b2.js": "/popular-games/precache-manifest.8eb27065e97cb011193c6e4700f3c2b2.js",
     "service-worker.js": "/popular-games/service-worker.js",
     "static/css/2.d48510fc.chunk.css.map": "/popular-games/static/css/2.d48510fc.chunk.css.map",
     "static/css/main.77b3337e.chunk.css.map": "/popular-games/static/css/main.77b3337e.chunk.css.map",
-    "static/js/2.df9d8141.chunk.js.LICENSE.txt": "/popular-games/static/js/2.df9d8141.chunk.js.LICENSE.txt"
+    "static/js/2.4613398d.chunk.js.LICENSE.txt": "/popular-games/static/js/2.4613398d.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.4a58fa8d.js",
     "static/css/2.d48510fc.chunk.css",
-    "static/js/2.df9d8141.chunk.js",
+    "static/js/2.4613398d.chunk.js",
     "static/css/main.77b3337e.chunk.css",
-    "static/js/main.67ee81d4.chunk.js"
+    "static/js/main.51f1155c.chunk.js"
   ]
 }
