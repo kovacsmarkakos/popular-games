@@ -22,7 +22,7 @@ const theme = createMuiTheme({
 const App = () => {
   const [items, setItems] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
-  const [year, setYear] = useState(0);
+  const [year, setYear] = useState(2020);
   const [fetchedGenres, setFetchedGenres] = useState([]);
   const [genre, setGenre] = useState("");
   const [muted, setMuted] = useState(true);
@@ -45,9 +45,7 @@ const App = () => {
     fetchItems();
   }, [year, genre]);
 
-  return isLoading ? (
-    ""
-  ) : (
+  return isLoading || (
     <>
       <CssBaseline />
       {

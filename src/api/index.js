@@ -1,39 +1,22 @@
 import axios from "axios";
+import { createUrl } from '../helpers'
 
-const url = "https://api.rawg.io/api/games?dates=2020-01-01,2020-12-31";
-
-export const fetchData = async (year, genre) => {
-  let changeableUrl = url;
-
-  if (year && genre) {
-    changeableUrl = `https://api.rawg.io/api/games?dates=${year}-01-01,${year}-12-31&genres=${genre}`;
-  } else if (year) {
-    changeableUrl = `https://api.rawg.io/api/games?dates=${year}-01-01,${year}-12-31`;
-  } else if (genre) {
-    changeableUrl = `https://api.rawg.io/api/games?dates=2020-01-01,2020-12-31&genres=${genre}`;
-  } else {
-    changeableUrl = url;
-  }
-
+export const fetchData = (year, genre) => {
   try {
-    const {
-      data: { results },
-    } = await axios.get(changeableUrl);
-
-    return results;
+    return axios
+      .get(createUrl(year, genre))
+      .then(data => data.data.results)
   } catch (error) {
-    console.log(error);
+    console.error(error);
   }
 };
 
-export const fetchGenres = async () => {
+export const fetchGenres = () => {
   try {
-    const {
-      data: { results },
-    } = await axios.get("https://api.rawg.io/api/genres");
-
-    return results;
+    return axios
+      .get("https://api.rawg.io/api/genres")
+      .then(data => data.data.results);
   } catch (error) {
-    console.log(error);
+    console.error(error);
   }
 };
