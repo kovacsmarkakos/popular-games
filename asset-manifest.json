@@ -6,19 +6,19 @@
     "runtime-main.js": "/popular-games/static/js/runtime-main.4a58fa8d.js",
     "runtime-main.js.map": "/popular-games/static/js/runtime-main.4a58fa8d.js.map",
     "static/css/2.d48510fc.chunk.css": "/popular-games/static/css/2.d48510fc.chunk.css",
-    "static/js/2.df9d8141.chunk.js": "/popular-games/static/js/2.df9d8141.chunk.js",
-    "static/js/2.df9d8141.chunk.js.map": "/popular-games/static/js/2.df9d8141.chunk.js.map",
+    "static/js/2.5cc151a6.chunk.js": "/popular-games/static/js/2.5cc151a6.chunk.js",
+    "static/js/2.5cc151a6.chunk.js.map": "/popular-games/static/js/2.5cc151a6.chunk.js.map",
     "index.html": "/popular-games/index.html",
-    "precache-manifest.bfa47aeb7d15305416823914734f0239.js": "/popular-games/precache-manifest.bfa47aeb7d15305416823914734f0239.js",
+    "precache-manifest.0721c749be59c34d265ee0dd2d5e8c6d.js": "/popular-games/precache-manifest.0721c749be59c34d265ee0dd2d5e8c6d.js",
     "service-worker.js": "/popular-games/service-worker.js",
     "static/css/2.d48510fc.chunk.css.map": "/popular-games/static/css/2.d48510fc.chunk.css.map",
     "static/css/main.77b3337e.chunk.css.map": "/popular-games/static/css/main.77b3337e.chunk.css.map",
-    "static/js/2.df9d8141.chunk.js.LICENSE.txt": "/popular-games/static/js/2.df9d8141.chunk.js.LICENSE.txt"
+    "static/js/2.5cc151a6.chunk.js.LICENSE.txt": "/popular-games/static/js/2.5cc151a6.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.4a58fa8d.js",
     "static/css/2.d48510fc.chunk.css",
-    "static/js/2.df9d8141.chunk.js",
+    "static/js/2.5cc151a6.chunk.js",
     "static/css/main.77b3337e.chunk.css",
     "static/js/main.331b60c4.chunk.js"
   ]
